@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'figaro'
 gem 'jquery-rails'
 gem 'fantasy_football_nerd'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

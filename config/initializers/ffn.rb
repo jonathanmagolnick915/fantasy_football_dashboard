@@ -1,0 +1,1 @@
+FFNerd.api_key = ENV['ffn_api_key']
