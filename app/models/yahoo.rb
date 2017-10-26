@@ -1,20 +1,16 @@
 require 'oauth_util.rb'
 
 class Yahoo
-  # GAME_KEY      = ENV['game_key']
-  # LEAGUE_NUMBER = ENV['league_number']
-  # GAME_KEY      =
-  # LEAGUE_NUMBER =
+  GAME_KEY      = ENV['game_key']
+  LEAGUE_NUMBER = ENV['league_number']
   LEAGUE_KEY    = "#{GAME_KEY}.l.#{LEAGUE_NUMBER}"
   BASE_URL      = 'http://fantasysports.yahooapis.com/fantasy/v2'
   LEAGUE_URL    = "#{BASE_URL}/league/#{LEAGUE_KEY}"
 
   def self.oAuth
     o                 = OauthUtil.new
-    # o.consumer_key    = ENV['consumer_key']
-    o.consumer_key    = 'dj0yJmk9TVZsQThOUmVYWFZuJmQ9WVdrOU5XUndZVVo2Tm5FbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1lYg'
-    # o.consumer_secret = ENV['consumer_secret']
-    o.consumer_secret = '37580f718fe723c05de1f6562572177255c8b83f'
+    o.consumer_key    = ENV['consumer_key']
+    o.consumer_secret = ENV['consumer_secret']
     o
   end
 
