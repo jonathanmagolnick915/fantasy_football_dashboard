@@ -1,4 +1,7 @@
 require 'oauth_util.rb'
+require 'net/http'
+require 'nokogiri'
+require 'open-uri'
 
 class Yahoo
   GAME_KEY      = ENV['game_key']
@@ -21,7 +24,7 @@ class Yahoo
       req       = Net::HTTP::Get.new "#{ parsed_url.path }?#{ o.sign(parsed_url).query_string }"
       @response = http.request(req).body
     end
-
+    Nokogiri::XML(@response)
   end
 
   def self.get_league_metadata
