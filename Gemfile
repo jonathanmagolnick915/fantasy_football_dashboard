@@ -7,6 +7,7 @@ end
 
 gem 'fantasy_football_nerd'
 gem 'figaro'
+gem 'hirb'
 gem 'jquery-rails'
 gem 'nokogiri'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -16,9 +16,9 @@ class Yahoo
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request = Net::HTTP::Get.new(url)
-    request['authorization'] = 'Bearer BVLpjaHOsln0TEuheEQYZ1T1PjuV_M.GNuCx_3PYSrhuVgoveJGMfCFTZNn32HjBRio6TyQrjr_uTgccXv8ZhZzn8bWEykC82ob_IQOFDZn7g_pZh2U_kvZH6aZq_wtDGicnqGIEh8bWYLw7IkPn4fr8TrfAplzXAf_D8WLC4lwJB0pZdWHBTokGrr29ynVMRCfxe48_r.pT_iiSkd58Xzfn_JVSMW.6QTT4rTGFdRlltZ2VAWmsWNjlFgBnHfAUUKFh.fkWBwIUheq.qomTkuq4l9PvRLyC.hPLezD.dpwiWRUEIcM_gIAsjW0eDVbg_GYzuYzfqnCQ678nQJ80FWpU8.Sgflpa2kgeJuAb2UA_2fFVGm8SabCoZO8FgSKv5JbLwMTqXVOjDQPRi4d0OTUs3uGC.ZITDzCCOz9h4x88be2mRrYG5Xzl6QxZP8KGOpjQ5gGAlh41r1HwforfHiMnzhNDSOSnydXUBwFRmBbJoyEovsnrTBmRA0v9ae2PEJ9jHA_IdA.ZtPCp_WnjFP_q2c56bfI2rqB20RwouPe61zbpiaw1viep1JQvQQY4_gpLrM.7npir6ZyxuETdN8rG2p02zsHZf4w4n_bUKxDjNSzv1xdVDXjl.8us9xM8tOBE8C1miyXQT34OfmDXKtAd_5ZEO.qmS5V1TWsAKA1Y.mkhORBtzHTFegQUwhmiesXcDXkGAGps7Kd2nWr4ZLGaVPrwJkD.0x1SxXkU.PIUnRJv3gEPpd3pGfGSzzo9DoEh8VM4N7xFFSul0X6Lkh_5I_40tvMnHSj_loSA2NmZeJtpn86TmtHh0b1pW1wdw3POEZW7xm5tLm2e_6X6VSNBEZ8t..P4W6d6fs32BgFyTASQHPzrQi8dTWwO.xQLAvTfE2h2XCry5j.27y_F2jLpiuTpNOG9k5WlKjwidqWB7rAQT0BcpsFmoVnfvSb31y3muMyEEbpHlgnJIhgdiR_dfhE9nPCfGoPFTNrxG4K2tB_JOeozRhJDJZK5opuaBQdAER37z1FseZHO8L9kBI5LCJcPMP4JZhVNy7Edfhwv6d.1nb7rxU_XJ5nhbItowqsHST2WNeMTL3Ci'
     request['cache-control'] = 'no-cache'
     request['postman-token'] = '4e23a1cf-6da1-fac0-084c-f56bd30ff210'
+    request['authorization'] = 'Bearer dBr0aU_OslncnDogq3FEhk5CcoOS9ByRKgVQlTjr9HjHLfkrTM_beecKWtVVU2fbLL3vC.u3v4lnx3J5s6u.LSdbKDbXbiJpxtbGoJ00mTfN47D35ROdeitRe_mKio68g2BrWes53tdhmlrk7JsKT7kS6h482uCDREcI5FjipkppAEIhYvItzzhG2El10CbZRmR230KkA35HUbB4fa4O3.CyqiPMu4xv.E9CObbsxyfKzwxfqygJ0SmGboO9USalzMa5XqTBLBNEpGTCQg05HtQfaD1mt2g2TbAxSA8ZTiYOfqIAJq7NAETbth7Qz14B4yPamKO5ozJJ1N4YYn8HIKCGcVzUrhUJA6KQcD69EwzlulFEi78VL2I3SNNh0Yz_AEATsOzaTy2eA6GcY710B_H..B5XwHL1yRG.BPFD0xRbuo.tVsNlAuIGDkYULgBkonhz7Y.ZpmIBcpb7xgRkpCfk02Zd_IBY2Y2YrFxWzpFIOk88ob5frqjIEm.CSzPj994z0q6MDUqhYgF0dqLDu6Sq66jH1szC_FGb5quNLqqxn6bpVZCiEFIUmsmAXvR24fPK22ZhPEDcZvR5FyIB2QW7YTkzYyToN7uvf22jhJ1zbxBSpKXbteK4BRWZ0Fp1QFaof3fM290jtnxz1ZOgWLYWL.iHCJbLFrc9DM47LW.pOgDFI7mI_in6hFRNRm5gdSf33Z1BMTYgiyWOyKhZgGamKIFvWsfdq8Qd7V2pTW.0fNXHEj1T_wOOuphHvAhzJyMDZuBAKg1wPIFbiUXjP4n7Xuto3zegAf0pPIbu7lh2coIhFgCPPUky.inlhqH4DC4G1sqef72MDyVfReiqqGuAnqEoS.i6gK3TKL6mRsadPGpDkAEe10M1kgo9IYUiMfZJ0.YsvdMT1dJWCBZ5UYPdGln8y2lRj4BCxmIzAyh5cKTC4K7GrLq8U17HlW91sjV429taj9Htk9zm6PlDxXmu51elEBvtA1bNqPvQqR60FVj3YEqSgJd3Ot15CFbcVlMx1wiDvVJu4kGyh5T9ckpk7COdZmH7jbit8a5Pv7Zf3g6FBxqS41hTiQggwmtw_lGBNLoL7ppzIM4W'
 
     @response = Nokogiri::XML(http.request(request).body)
     @response
@@ -31,30 +31,43 @@ class Yahoo
   end
 
 
-  def self.get_all_players(limit = 1300)
+  def self.get_all_players(limit = 25)
     players_url = "#{LEAGUE_URL}/players"
-    players     = []
+    players = []
 
     (0..limit).step(25) do |i| #have to pull down in batches
       batch_url = "#{players_url};start=#{i};count=25"
+      # batch_url = "#{players_url};start=1;count=5"
       doc = get_xml(batch_url)
-      doc.css('players').each do |player_xml|
+      doc.css('player').each do |player_xml|
         players << get_player_hash_from_xml(player_xml)
       end
     end
+    players
+  end
+
+  def self.get_teams
+    teams = []
+    teams_url = "#{LEAGUE_URL}/teams"
+    doc = get_xml (teams_url)
+    doc.css('team').each do |team_xml|
+      teams << get_team_hash_from_xml(team_xml)
+    end
+
+    teams
   end
 
   def self.get_players_from_team(yahoo_team_key)
     players = []
     #http://developer.yahoo.com/fantasysports/guide/team-resource.html
     team_url = "#{BASE_URL}/team/#{yahoo_team_key}/roster"
+    p team_url
     doc = get_xml(team_url)
     doc.css('player').each do |player_xml|
       players << get_player_hash_from_xml(player_xml)
     end
-
     players
-  end
+    end
 
   ##############################################################################
   # Turn raw XML into hashes
@@ -65,6 +78,8 @@ class Yahoo
         yahoo_key:  xml.css('team_key').inner_html,
         yahoo_id:   xml.css('team_id').inner_html,
         name:       xml.css('name').inner_html,
+        yahoo_owner_id: xml.css('manager_id').inner_html,
+        yahoo_owner_name: xml.css('nickname').inner_html,
     }
   end
 
@@ -91,4 +106,4 @@ class Yahoo
     }
   end
 
-end
+ end
