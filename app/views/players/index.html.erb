@@ -1,2 +1,28 @@
-<h1>Players#index</h1>
-<p>Find me in app/views/players/index.html.erb</p>
+<div class="row">
+  <div class="span7">
+    <table class="table">
+      <tbody>
+      <% @players.each do |player| %>
+          <% @rank += 1 %>
+          <tr>
+            <td>
+              <%= @rank %>
+            </td>
+            <td>
+              <%= player.position %>
+            </td>
+            <td>
+              <%= player.name %>
+            </td>
+            <td>
+              <%= player.yahoo_team_name %>
+            </td>
+            <td>
+              <%= player.points %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

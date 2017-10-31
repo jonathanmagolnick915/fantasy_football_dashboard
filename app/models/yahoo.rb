@@ -18,7 +18,7 @@ class Yahoo
     request = Net::HTTP::Get.new(url)
     request['cache-control'] = 'no-cache'
     request['postman-token'] = '4e23a1cf-6da1-fac0-084c-f56bd30ff210'
-    request['authorization'] = 'Bearer NkMXWDXOsln0EvX5W3GDmP9p2F_vAptJh7hr16V9ie_XSJfYPlJBzJwpVdxoOaFNq513S6MVkRPI7.ppjc3k4jFcRy1FfVkzDdpxCpZ86VXliEgBfuVbD43T4JvED7rre6xiSHjxBcU_dHRoSnv6ACqgIWuBGO8_SkTPt5UyEjlwYFq9a1ldpgmZMHxKjSG6cpIlO8XgGznym41D4u0RLenqK.rqMbDKAQF45AX7lsBLFJN5kMA2rOf1KORje1lCoq.Ho28iuqsz.012eQmWhDyNa3uxevVQ6uf5bR7uA1OaEuNmFFKVTbPq5AkDDNpNE6FxcH1pqBys6dWXmn1hg1iZKrjPDTv9pgCyg1nNBwNGVghlSffkpC9TGaPhkax3BBdgMCxLp9DNxD778LmJttpfugBQ8FXjdcd4ulcRwRu1nx6rhF3i9eSOvydDLUSOMpy3gSAulLWU9d3.yOn32NWlbtORtoxtYfOevYkZa.1pHNs4M23rQ81dDi6rgdm0bqmbV9F9IuZGxPAH36TAAy45.mXcI1ll7znoCIDcndn.QqFzVo24sPZxksvxzEvvyl6qb6Gzi3Nh99OtJ7fsuvTGUrwTlR3W8Vsm4EUDiOSad3om3CXa3Kk0.j5y.v7c7CnhM45t6SK00A6C2HHuv.rvt7ND7uXJdOWHwY_RqOTaS2NOkrpKm8MJHZEemNhf6Rf3ScN_Xk.QOCWPhexiceAF5DzsRFU8RvxTylP6bF9x1AHPknWCjKWNkMeiPtCemUMNHvWZGyDmkbNg9u4lvzEr86mZuseXlLMxsBv5hHGkzPAJJFlFl_2Z1i8n70fJwU.Mwt2NmI_9CIcaeTSRj42igyDUW48jLDoG7cIwLmWTH_q_csPZ4LQSiY0ZTIHQ2DlyLlnxxFyuH6LYYR834oN1jRlicbhd._RRM8Kg2lVbKH_ZJRCsGwGckYJCPwj0Ld1ZidPXwxHLZ1mZa.TokD45uY_SBNJEVALWAMCLrtlZYhJITUC7AAaeE5uKfJQ6EVvy3p4rTkuFaI2r6Mkdh5XX2J2rGRgV6d9njKS7_LqPv4v070ONUs2EK3OhIoiQBHtqLNmMY1z29iRt'
+    request['authorization'] = 'Bearer WcE_cw3Oslmc0Z5e58CEwjE0lSs0iE.QGeh3h1XL2XPb4pr2XFE7f3j_OBOqpSA217A.DpcYcK47DOd9R0IoxxepcaGWZl3ITLk3FE8QLlfCQBrelekuEMTMDS8BczlZOTUZHWFambQu9j3.QtuFbwUQ_Tj5swGjvIfhJbCpGa1nRnvytHyPX62hxEWY9SMBcHDQ0QS9Br.mgKQIcyZR_bF8rMra1HfKZnVWI7JyFlibeY_Rypx7Av.1XKIiyYPXB0Ht1T7_JDAUKnbTezbqcB1b7yYFpos8p5ToX2M60Z3mOe2o2XgTu1Y9h74T.guYOhGHrEzR.43z_5Hyn2J03SwVifNZL0EUl.6ilsdtfwKD5Ma18gxVgsqRuPH39cDVRsqeVhW5hxJGjgUq8eHybOGbDF8hb5YzJ7bR_cLjibgZ__PEUU0PnLZwXVh.E.MlkzErbi67q0u2.aqL.tPtCZfcrnvwJchbw1bXj0KVPp6I2Zye12mPxTw8ifQPlPKFsuJeEEpgj9O_W_LD4ix523X7RFrSscCsacrieTid6y6yjlglJ0P7TEjC9ERPcrvOwAR52lyUiAz6Xc.A5lg7afiRRHpIqIYbKd8lYtHqdIFRYgOqa7BpvuRutpBTQsNVtSY5ZCgVhspyY_.WcD.vwWjavsrs0OG5z6NOjpDhjK7y1fBSii.bbwdUTRDOd7WFQWWieTXgUUr_qkJ8rvANnkvZuG0byNC6OwRNE0hHnOXxNruPFcPemhk75GY8OV0DxScYw_JaFpuHnp0vhF3xpozS3gKusa73aIkkKEArsokWt6Ua5CAUEpaAizXXOHO2qfM0GgmSmieTqigJaWem01ao1cTsasH4v0sBq2gkdcoKGaXvo45fjJdY3xc5TgyNqmvh4uA5yhUc5IiJRuDCTB6JmQiNzgSxka5J1ugGhMXo34OjhZSML8VX0WDnCvmb3imN_ChFNtJ5MkEdm1kDwg.0FDt4XVF7cw6nqJeMxC5YFQ.gm49BzwDCA.bfmey9KzYTfyTkKDUGy1CUhefhikJpDQvzibNcmy8H0fte2m6gEQt8eah91uffzUSMWL60VTLO_JLJVekZc7aQ'
 
     @response = Nokogiri::XML(http.request(request).body)
     @response
@@ -31,13 +31,12 @@ class Yahoo
   end
 
 
-  def self.get_all_players(limit = 25)
+  def self.get_all_players(limit = 1300)
     players_url = "#{LEAGUE_URL}/players"
     players = []
 
     (0..limit).step(25) do |i| #have to pull down in batches
       batch_url = "#{players_url};start=#{i};count=25"
-      # batch_url = "#{players_url};start=1;count=5"
       doc = get_xml(batch_url)
       doc.css('player').each do |player_xml|
         players << get_player_hash_from_xml(player_xml)

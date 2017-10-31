@@ -1,5 +1,5 @@
 class Player < ApplicationRecord
-  # has_many :projections, order: 'week DESC'
+  has_many :projections, -> { order 'week DESC' }
   validates_uniqueness_of :yahoo_id
 
   def self.all_from_yahoo
@@ -13,16 +13,16 @@ class Player < ApplicationRecord
 
   def self.from_yahoo(data)
     player = Player.create(
-        name:       "#{data[:first_name]} #{data[:last_name]}",
-                first_name: data[:first_name],
-                last_name:  data[:last_name],
-                position:   data[:position],
-                team:       data[:team],
-                bye_week:   data[:bye_week].to_i,
-                yahoo_id:   data[:yahoo_id],
-                # yahoo_key:   data[:yahoo_key],
-                team_id:    nil,
-                active:     false
+      name:  "#{data[:first_name]} #{data[:last_name]}",
+      first_name:     data[:first_name],
+      last_name:      data[:last_name],
+      position:       data[:position],
+      team:           data[:team],
+      bye_week:       data[:bye_week].to_i,
+      yahoo_id:       data[:yahoo_id],
+      # yahoo_key:   data[:yahoo_key],
+      team_id:    nil,
+      active:     false
     )
   end
 
@@ -40,25 +40,26 @@ class Player < ApplicationRecord
 
   def self.from_ffn(data)
     player = Player.new(
-        name:     data.display_name,
-        position: data.position,
-        ffn_id:   data.player_id,
-        team:     data.team,
-        # bye_week: data.bye,
-        active: data.active,
-        # TODO: update player key to include only the first two letters of the first name
-        rotoworld_key: data.display_name.gsub(' ', '-').downcase
+      name:     data.display_name,
+      position: data.position,
+      ffn_id:   data.player_id,
+      team:     data.team,
+      # bye_week: data.bye,
+      active:   data.active
+      # TODO: update player key to include only the first two letters of the first name
+      # rotoworld_key: "#{name.split.first.slice(0..1)} #{name.split.last}".tr(' ', '-').downcase
     )
     player.set_lookup_key
     player
   end
 
   def set_lookup_key
-    #create a player key that will assist in the merging process
-    #sometimes the first name is different - Stevie vs. Steve
-    #so we just match on the first two letters
+    # create a player key that will assist in the merging process
+    # sometimes the first name is different - Stevie vs. Steve
+    # so we just match on the first two letters
     # TODO: update player key to include only the first two letters of the first name
-    temp_name = name.gsub(' ', '-').downcase
+    temp_name = "#{name.split.first.slice(0..1)} #{name.split.last}"
+                .tr(' ', '-').downcase
     if self.position == 'DEF'
       self.lookup_key = "#{team}-DEF"
     else
@@ -74,22 +75,21 @@ class Player < ApplicationRecord
     player1.save
   end
 
-  def set_rotoworld_key
-    # TODO: update player key to include only the first two letters of the first name
-  @rotoworld_key = name.gsub(' ', '-').downcase
-  end
+  # def set_rotoworld_key
+  #   # TODO: update player key to include only the first two letters of the first name
+  #   @rotoworld_key = "#{name.split.first.slice(0..1)} #{name.split.last}".tr(' ', '-').downcase
+  # end
 
   def projection
     projection = projections.where(week: Projection.current_week).first
-    projection.nil? ? "-" : projection.standard
+    projection.nil? ? '-' : projection.standard
   end
 
   def yahoo_team_name
     team_id.nil? ? '' : Team.find(team_id).name
   end
 
-  def self.update_injuries
-  end
+  def self.update_injuries; end
 
   def self.reset_projections
     Player.update_all(points: 0)

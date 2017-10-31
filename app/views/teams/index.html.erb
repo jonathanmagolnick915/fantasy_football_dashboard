@@ -4,7 +4,7 @@
     <% @teams.each do |team| %>
         <tr>
           <td>
-            <%= link_to team.name, teams_show_path(team) %>
+            <%= link_to team.name, team_path(team) %>
           </td>
           <td class="points">
             <%= team.active_points %>

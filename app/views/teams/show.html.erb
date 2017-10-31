@@ -1,2 +1,74 @@
-<h1>Teams#show</h1>
-<p>Find me in app/views/teams/show.html.erb</p>
+<h2>
+  <%= @team.name %>
+</h2>
+<div class="row">
+  <div class="span4">
+    <table class="table">
+      <tbody>
+      <% @team.active.each do |player| %>
+          <tr>
+            <td>
+              <%= player.position %>
+            </td>
+            <td>
+              <%= player.name %>
+            </td>
+            <td>
+              <%= player.bye_week %>
+            </td>
+            <td class="points">
+              <%= player.points %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <h3>Bench</h3>
+    <table class="table">
+      <tbody>
+      <% @team.bench.each do |player| %>
+          <tr>
+            <td>
+              <%= player.position %>
+            </td>
+            <td>
+              <%= player.name %>
+            </td>
+            <td>
+              <%= player.bye_week %>
+            </td>
+            <td class="points">
+              <%= player.points %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="span4 offset1">
+    <h3>Free Agents</h3>
+    <table class="table">
+      <tbody>
+      <% @team.better_free_agents.each do |player| %>
+          <tr>
+            <td>
+              <%= player.position %>
+            </td>
+            <td>
+              <%= player.name %>
+            </td>
+            <td>
+              <%= player.team %>
+            </td>
+            <td>
+              <%= player.bye_week %>
+            </td>
+            <td class="points">
+              <%= player.points %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

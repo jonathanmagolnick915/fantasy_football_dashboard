@@ -1,8 +1,7 @@
 class Team < ApplicationRecord
-  # has_many :players, order: 'active DESC, position ASC'
+  has_many :players, -> { order 'active DESC, position ASC' }
   validates_uniqueness_of :yahoo_id
 
-  #only use this if shit went really bad
   def self.start_over
     Player.delete_all
     Team.delete_all
@@ -67,11 +66,11 @@ class Team < ApplicationRecord
   end
 
   def active_points
-    players.where(active: true).sum('points').round(1)
+    players.where(active: true).sum(:points).round(1)
   end
 
   def worst_players
-    positions = %w{ QB WR RB TE K DEF }
+    positions = %w[QB WR RB TE K DEF]
     worst = []
     positions.each do |position|
       worst += Player.where(team_id: id, position: position).order('points ASC').limit(1)
@@ -82,20 +81,20 @@ class Team < ApplicationRecord
   def better_free_agents
     replacements = []
     worst_players.each do |p|
-      replacements += Player.where(['team_id IS NULL and position = ? and points >= ?', p.position, p.points]).order('points DESC').limit(3)
+      replacements +=
+          Player.where('team_id IS NULL AND position = ? AND points >= ?', p.position, p.points).order(points: :desc).limit(3)
     end
     replacements
   end
 
   def in_display_order(players)
     ordered_players = []
-    order = %W{ QB WR RB TE K DEF }
+    order = %w[QB WR RB TE K DEF]
     order.each do |position|
       players.each { |p| ordered_players << p if p.position == position }
     end
     ordered_players
   end
-
 
 end
 

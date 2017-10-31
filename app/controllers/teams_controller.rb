@@ -8,4 +8,10 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
   end
 
+  private
+
+  def team_params
+    params.require(:id).permit(:id)
+  end
+
 end
