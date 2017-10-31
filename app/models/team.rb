@@ -1,5 +1,5 @@
 class Team < ApplicationRecord
-  has_many :players, order: 'active DESC, position ASC'
+  # has_many :players, order: 'active DESC, position ASC'
   validates_uniqueness_of :yahoo_id
 
   #only use this if shit went really bad

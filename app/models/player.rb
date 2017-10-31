@@ -1,5 +1,5 @@
 class Player < ApplicationRecord
-  has_many :projections, order: 'week DESC'
+  # has_many :projections, order: 'week DESC'
   validates_uniqueness_of :yahoo_id
 
   def self.all_from_yahoo
