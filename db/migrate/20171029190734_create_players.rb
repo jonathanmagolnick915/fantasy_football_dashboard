@@ -9,7 +9,7 @@ class CreatePlayers < ActiveRecord::Migration[5.1]
       t.string :ffn_id
       t.string :yahoo_id
       t.integer :team_id
-      t.string :active
+      t.boolean :active
       t.string :created_at
       t.string :updated_at
 
