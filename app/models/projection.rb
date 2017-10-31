@@ -1,4 +1,5 @@
 class Projection < ApplicationRecord
+  validates_uniqueness_of :player_id, scope: :week
   POSITIONS = %w{QB RB WR TE K}
 
   def self.update_from_ffn
