@@ -3,7 +3,15 @@
 </h2>
 <div class="row">
   <div class="span4">
-    <table class="table">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Position</th>
+        <th>Name</th>
+        <th>Bye Week</th>
+        <th>Points</th>
+      </tr>
+      </thead>
       <tbody>
       <% @team.active.each do |player| %>
           <tr>
@@ -24,7 +32,15 @@
       </tbody>
     </table>
     <h3>Bench</h3>
-    <table class="table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Name</th>
+          <th>Bye Week</th>
+          <th>Points</th>
+        </tr>
+      </thead>
       <tbody>
       <% @team.bench.each do |player| %>
           <tr>
@@ -47,7 +63,16 @@
   </div>
   <div class="span4 offset1">
     <h3>Free Agents</h3>
-    <table class="table">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Position</th>
+        <th>Name</th>
+        <th>Team</th>
+        <th>Bye Week</th>
+        <th>Points</th>
+      </tr>
+      </thead>
       <tbody>
       <% @team.better_free_agents.each do |player| %>
           <tr>

@@ -2,5 +2,16 @@
 @import "bootstrap";
 
 .navbar-default {
-  background-color: lightblue;
+  background-color: rebeccapurple;
+  border-color: transparent;
+  border-radius: 0px;
+
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
 }
