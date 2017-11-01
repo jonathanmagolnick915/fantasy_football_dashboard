@@ -1,16 +1,19 @@
+<div class="text-center">
+  <h2>Weekly Projections</h2>
+</div>
 <div class="span3">
   <table class="table table-striped">
 <thead>
 <tr>
-  <th>Team Name</th>
-  <th>Points</th>
+  <th>Team Rank</th>
+  <th>Projected Points</th>
 </tr>
 </thead>
     <tbody>
-    <% @teams.each do |team| %>
+    <% @ordered_teams.each_with_index do |team, i| %>
         <tr>
           <td>
-            <%= link_to team.name, team_path(team) %>
+            <%= i + 1 %>  <%= link_to team.name, team_path(team) %>
           </td>
           <td class="points">
             <%= team.active_points %>

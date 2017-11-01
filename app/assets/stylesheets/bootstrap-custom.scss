@@ -15,3 +15,14 @@
 .navbar-default .navbar-nav > li > a {
   color: white;
 }
+
+.btn.btn-primary > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn.btn-primary >  a:hover,
+a:focus {
+  color: #d9edf7;
+  text-decoration: none;
+}

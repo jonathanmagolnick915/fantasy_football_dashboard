@@ -8,6 +8,10 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
   end
 
+  def improve
+    @team = Team.find(params[:id])
+  end
+
   private
 
   def team_params

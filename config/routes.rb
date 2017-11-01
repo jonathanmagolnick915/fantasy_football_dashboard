@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'teams#index'
+  get  '/teams/:id/improve', to: 'teams#improve', as: :improve_team
 
   resources :teams
   resources :players

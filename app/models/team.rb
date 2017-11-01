@@ -69,6 +69,24 @@ class Team < ApplicationRecord
     players.where(active: true).sum(:points).round(1)
   end
 
+  def self.sort_by_points
+    ordered_teams = []
+    Team.all.each do |team|
+      t = {}
+      t[:name] = team.name
+      t[:points] = team.active_points
+      ordered_teams << t
+    end
+    ot = ordered_teams.sort_by { |t| t[:points] }.reverse
+
+    or_teams = []
+    ot.each do |tt|
+      t = Team.find_by(name: tt[:name])
+      or_teams << t
+    end
+    or_teams
+  end
+
   def worst_players
     positions = %w[QB WR RB TE K DEF]
     worst = []
